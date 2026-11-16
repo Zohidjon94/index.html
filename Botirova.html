@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoBin AI - Yashil Balans</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f6f8; margin: 0; padding: 20px; color: #333; }
+        .card { background: white; padding: 20px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); text-align: center; margin-bottom: 20px; }
+        .balance { font-size: 32px; font-weight: bold; color: #2e7d32; margin: 10px 0; }
+        .btn { background-color: #2e7d32; color: white; border: none; padding: 12px 20px; border-radius: 10px; font-size: 16px; width: 100%; cursor: pointer; margin-top: 10px; }
+        .btn:active { background-color: #1b5e20; }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h3>Sizning EcoCoin Balansingiz</h3>
+        <div class="balance" id="coinBalance">145 🪙</div>
+        <p>Tabiatni asrashga qo'shgan hissangiz: <b>4.2 kg plastik</b></p>
+    </div>
+
+    <div class="card">
+        <h3>Chiqindi topshirish</h3>
+        <p>Qutidagi QR-kodni skanerlang va ballarga ega bo'ling.</p>
+        <button class="btn" onclick="openScanner()">📸 QR-Kodni Skanerlash</button>
+    </div>
+
+    <div class="card">
+        <h3>Bonuslarni ishlatish</h3>
+        <button class="btn" style="background-color: #ff8f00;" onclick="openRewards()">🎁 Kuponlarga almashtirish</button>
+    </div>
+
+    <script>
+        // Telegram WebApp integratsiyasi
+        let tg = window.Telegram.WebApp;
+        tg.expand();
+
+        function openScanner() {
+            alert("Kamera ochilmoqda... Qutidagi QR-kodni skanerlang.");
+            // Bu yerda QR skanerlash logikasi ishga tushadi
+        }
+
+        function openRewards() {
+            alert("Hamkorlar bo'limi tez kunda ochiladi!");
+        }
+    </script>
+</body>
+</html>
